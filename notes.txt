@@ -1,0 +1,5 @@
+Added more content in the rest of the page
+
+start adding routes for backend
+
+you need comment your code. Should really spend some time doing that.
