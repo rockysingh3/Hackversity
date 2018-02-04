@@ -33,6 +33,15 @@
 .college{display:none;}
 .attendees{display:none;}
 
-.navbar {
-  background-color: black;
+
+.jumbotron {
+  background-image: url(../img/logoHV.png);
+  background-repeat: no-repeat;
+  background-size: 720px;
+  background-color: #D81828!important;
+  background-position: center;
+  background-color: rgb(220,48,62);
+  min-height: 750px;
+  margin-bottom: 0px!important;
+  padding-bottom: none;
 }
