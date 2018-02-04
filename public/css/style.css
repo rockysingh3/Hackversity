@@ -1,0 +1,31 @@
+#filter {
+    list-style-type: none;
+    margin-bottom: 70px;
+}
+#filter li{
+    float:left;
+    font-size: 25px;
+    border-right: 2px solid gray;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+#filter li:last-child {
+    border-right: none;
+}
+#filter li a {
+    color: gray;
+    text-decoration: none;
+}
+
+#filter li.current a {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#filter li a:hover {
+    color: red;
+}
+
+#forms {
+  list-style-type: none;
+}
