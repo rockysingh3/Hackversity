@@ -4,16 +4,16 @@
 
 <div class="container">
   <ul id="filter">
-  		<li class="current"><a href="#">Middle School And High School Students</a></li>
-  		<li><a href="#">Attendees College Students</a></li>
-  		<li><a href="#">Mentor And Vounteer</a></li>
-  	</ul>
-  <ul id="forms">
-        <li class="Attendess_Middle_School_And_High_School_Students"> <% include ./forms/Students %> </li>
-        <li class="Attendees_College_Students"> <% include ./forms/college %> </li>
-        <li class="Mentor_And_Vounteer"> <% include ./forms/attendees %> </li>
-    </ul>
-</div>
+    <li class="current"><a href="#" data-index="students">Attendess (Middle School/High School Students)</a></li>
+    <li><a href="#" data-index="college">Attendees (College Students)</a></li>
+    <li><a href="#" data-index="attendees">Mentor/Vounteer</a></li>
+</ul>
+
+<ul id="forms">
+    <li class="students"> <% include ./forms/students %> </li>
+    <li class="college"> <% include ./forms/college %> </li>
+    <li class="attendees"> <% include ./forms/attendees %> </li>
+</ul>
 
 
 
@@ -40,11 +40,11 @@
           $("#filter a").click(function(){
             $("#filter .current").removeClass("current");
             $(this).parent().addClass("current");
-            var filterVal = $(this).text().replace(" ", "_");
+            var filterVal = $(this).data('index');
             $("#forms li").fadeIn();
-            $("#forms li").not(document.getElementsByClassName("filterVal")).hide();
-          });
-        });
+            $("#forms li:not(."+ filterVal+")").fadeOut();
+      });
+    });
   </script>
 
   </body>
