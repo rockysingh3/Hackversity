@@ -42,7 +42,7 @@
             $(this).parent().addClass("current");
             var filterVal = $(this).data('index');
             $("#forms li").fadeIn();
-            $("#forms li:not(."+ filterVal+")").fadeOut();
+            $("#forms li:not(."+ filterVal+")").hide();
       });
     });
   </script>
