@@ -30,6 +30,8 @@
   list-style-type: none;
 }
 
+
+/* jquery function for dispalying forms */
 .college{display:none;}
 .attendees{display:none;}
 
@@ -48,4 +50,9 @@
 
 .about {
   text-align: center;
+}
+
+/* forms  */
+.form-Students input {
+  margin-bottom: 20px;
 }
