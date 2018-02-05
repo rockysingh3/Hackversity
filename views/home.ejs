@@ -3,7 +3,7 @@
 <div class="jumbotron jumbotron-fluid">
 </div>
 
-<div class="container">
+
   <div class="about">
     <h1 class="about_title">What is HackBersity</h1>
     <h3 class="about_content">Hackversity is a 24 hour hackathon that aims to give people in our community
@@ -12,7 +12,7 @@
   </div>
 
 
-
+<div class="container">
   <ul id="filter">
     <li class="current"><a href="#" data-index="students">Attendess (Middle School/High School Students)</a></li>
     <li><a href="#" data-index="college">Attendees (College Students)</a></li>
@@ -24,6 +24,7 @@
     <li class="college"> <% include ./forms/college %> </li>
     <li class="attendees"> <% include ./forms/attendees %> </li>
 </ul>
+</div>
 
 
 
@@ -47,6 +48,7 @@
 
   <script type="text/javascript">
         $(document).ready(function(){
+          // filters through the different forms
           $("#filter a").click(function(){
             $("#filter .current").removeClass("current");
             $(this).parent().addClass("current");
