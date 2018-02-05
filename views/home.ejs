@@ -12,18 +12,43 @@
   </div>
 
 
+<!-- all three forms  -->
 <div class="container">
   <ul id="filter">
-    <li class="current"><a href="#" data-index="students">Attendess (Middle School/High School Students)</a></li>
-    <li><a href="#" data-index="college">Attendees (College Students)</a></li>
-    <li><a href="#" data-index="attendees">Mentor/Vounteer</a></li>
+    <li class="current"><a href="#" data-toggle="modal" data-target="#HighSchoolStudents">Attendess (Middle School/High School Students)</a></li>
+    <li><a href="#" data-toggle="modal" data-target="#CollegeStudents">Attendees (College Students)</a></li>
+    <li><a href="#" data-index="attendees" data-toggle="modal" data-target="#Attendess">Mentor/Vounteer</a></li>
 </ul>
 
-<ul id="forms">
-    <li class="students"> <% include ./forms/students %> </li>
-    <li class="college"> <% include ./forms/college %> </li>
-    <li class="attendees"> <% include ./forms/attendees %> </li>
-</ul>
+<!-- High School students Modal -->
+  <div class="modal fade" id="HighSchoolStudents">
+    <div class="modal-dialog">
+      <div class="modal-content">
+            <a href="#"><% include ./forms/HighSchoolStudents %></a>
+      </div>
+    </div>
+  </div>
+
+<!-- College Students Modal -->
+  <div class="modal fade" id="CollegeStudents">
+    <div class="modal-dialog">
+      <div class="modal-content">
+            <a href="#"><% include ./forms/college %></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Attendees Modal  -->
+  <div class="modal fade" id="Attendess">
+    <div class="modal-dialog">
+      <div class="modal-content">
+            <a href="#"><% include ./forms/attendees %></a>
+      </div>
+    </div>
+  </div>
+
+
+
 </div>
 
 
@@ -45,19 +70,6 @@
   <!-- Bootstrap JS CDN -->
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-
-  <script type="text/javascript">
-        $(document).ready(function(){
-          // filters through the different forms
-          $("#filter a").click(function(){
-            $("#filter .current").removeClass("current");
-            $(this).parent().addClass("current");
-            var filterVal = $(this).data('index');
-            $("#forms li").fadeIn();
-            $("#forms li:not(."+ filterVal+")").hide();
-      });
-    });
-  </script>
 
   </body>
 
