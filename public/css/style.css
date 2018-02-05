@@ -51,10 +51,7 @@
 }
 
 .about {
-  text-align: center;
+  text-align: center
 }
 
 /* forms  */
-.form-Students input {
-  margin-bottom: 20px;
-}
